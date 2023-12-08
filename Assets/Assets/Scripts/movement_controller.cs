@@ -20,7 +20,6 @@ public class movement_controller : MonoBehaviour
     private Vector3 initialScale; 
     private bool squished = false; 
     private SpriteRenderer spriteRenderer; 
-    private BoxCollider2D robeCollider; 
     private CapsuleCollider2D bodyCollider; 
     private CircleCollider2D headCollider;  
     public GameObject projectilePrefab; 
@@ -33,7 +32,6 @@ public class movement_controller : MonoBehaviour
         speed = initial_speed;
         jumping_power = initial_jumpingPower;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        robeCollider = GetComponent<BoxCollider2D>(); 
         headCollider = GetComponent<CircleCollider2D>(); 
         bodyCollider = GetComponent<CapsuleCollider2D>(); 
     }
@@ -118,13 +116,11 @@ public class movement_controller : MonoBehaviour
     void SetBodyCollider()
     {
         bodyCollider.enabled = true; 
-        robeCollider.enabled = true;  
         headCollider.enabled = false; 
     }
     void SetHeadCollider()
     {
-        bodyCollider.enabled = false;
-        robeCollider.enabled = false;  
+        bodyCollider.enabled = false; 
         headCollider.enabled = true; 
     }
 

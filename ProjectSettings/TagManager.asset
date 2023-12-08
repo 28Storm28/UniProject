@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - Enemy
   - CardPickup
+  - Checkpoint
+  - Death
+  - Undefined
+  - Fireball
   layers:
   - Default
   - TransparentFX
