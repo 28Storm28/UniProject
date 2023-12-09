@@ -79,6 +79,8 @@ public class movement_controller : MonoBehaviour
 
 
     void Attack(){
+        // Check if player is 'crouched' and stop the ability to attack when they are
+
         if(!squished){
             if(isFacingRight){
                 Instantiate(projectilePrefab, projectileOffset.position, transform.rotation); 
@@ -146,7 +148,6 @@ private void OnCollisionEnter2D(Collision2D collision) {
     }
 // Flip player model to be facing the right way
     private void Flip()
-    
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {

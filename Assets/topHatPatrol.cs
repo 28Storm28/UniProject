@@ -19,9 +19,12 @@ public class topHatPatrol : StateMachineBehaviour
         vars = animator.GetComponent<hatPatrolVariables>(); 
         pointA = self.transform.position; 
         pointB = self.transform.position; 
-        pointA = new Vector2(self.transform.position.x + vars.aOffset, self.transform.position.y);
+        // This should probably be set within the game object so that it isn't re assigned when changing back to tis state 
+        // pointA = new Vector2(self.transform.position.x + vars.aOffset, self.transform.position.y);
+        pointA = vars.pointA; 
+        pointB = vars.pointB; 
         Debug.Log(pointA); 
-        pointB = new Vector2(self.transform.position.x + vars.bOffset, self.transform.position.y);
+        // pointB = new Vector2(self.transform.position.x + vars.bOffset, self.transform.position.y);
         Debug.Log(self.transform.position); 
         Debug.Log(pointB);   
         currentPoint = pointA; 
