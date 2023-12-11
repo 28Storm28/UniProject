@@ -74,7 +74,7 @@ public class movement_controller : MonoBehaviour
     }
     void Update()
     {
-        
+        // TODO: clean this abomination up
         if (health < 1){ 
             canMove = false; 
         }
@@ -142,17 +142,21 @@ public class movement_controller : MonoBehaviour
 
     //Manage crouching states
     void Squish(){
+        // Reduce movement speed while crouched and stop jumping
         speed = initial_speed*0.66f; 
         jumping_power = 0; 
         squished = true; 
         rb.mass = .5f;  
         rb.gravityScale = .5f; 
         //Vector3 newScale = new Vector3(initialScale.x,initialScale.y * 0.5f,initialScale.z);
+        // Set renderer to only render head
         spriteRenderer.sprite = head; 
+        //Set colliders
         SetHeadCollider(); 
         //transform.localScale = newScale;
     }
     void UnSquish(){ 
+        // Reset to default attributes
         squished = false ;
         spriteRenderer.sprite = main; 
         //transform.localScale = initialScale; 
@@ -164,6 +168,7 @@ public class movement_controller : MonoBehaviour
         SetBodyCollider(); 
     }
     void SquishBounce(){
+        // Same as squish but different assets
         bounce = true; 
         jumping_power = 0; 
         rb.mass = .5f;  
@@ -174,6 +179,7 @@ public class movement_controller : MonoBehaviour
         //transform.localScale = newScale;
     }
     void UnSquishBounce(){ 
+        // Same as squish but different assets
         bounce = false ;
         spriteRenderer.sprite = main; 
         //transform.localScale = initialScale; 
@@ -184,6 +190,7 @@ public class movement_controller : MonoBehaviour
         rb.gravityScale = 1f; 
         SetBodyCollider(); 
     }
+    // Collider changing functions
     void SetBodyCollider()
     {
         bodyCollider.enabled = true; 
@@ -202,14 +209,17 @@ public class movement_controller : MonoBehaviour
         bounceHead.enabled = true;
     }
 
-
+    //Manage collisions
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Checkpoint")){
+            // If hit a checkpoint save the location
             lastCheckPoint = transform.position;
         }
         if(collision.gameObject.CompareTag("Death")){
+            // If hit enviromental object take damage 
             if(canTakeDamage){
                 Debug.Log("Hit spike can take damage set to" + canTakeDamage); 
+                // Set point back to last checkpoint
                 transform.position = lastCheckPoint;
                 Damage(); 
             }
@@ -223,6 +233,7 @@ public class movement_controller : MonoBehaviour
     }
     // Iframe code adapted from https://www.youtube.com/watch?v=phZRfEAuW7Q 
     private IEnumerator iFrames(){ 
+        // Stops damage from being taken for a set time after being damaged
         int temp = 0; 
         canTakeDamage = false;
         while(temp < flashNumber){
@@ -246,16 +257,19 @@ public class movement_controller : MonoBehaviour
         }
     }
     private IEnumerator reload(){ 
+        // Add fireball back to ammo after set time
         yield return new WaitForSeconds(reloadTime); 
         ammo++; 
     }
     private void Die(){ 
+        // Stops the player from moving while dead
         canMove = false; 
         ammo = 0; 
     }
 //Check if playing is touching the ground
     private bool IsGrounded()
     {
+        //Check if the player is touching the ground, different hitbox used while in head mode as ground check would rotate
         if(squished){
             return Physics2D.OverlapCircle(transform.position,0.4f, groundLayer); 
         }else{

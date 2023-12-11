@@ -9,6 +9,18 @@ public class cameraCollider : MonoBehaviour
     public Transform prevTarget;
     public float size; 
     private float prevSize; 
+
+
+
+
+    /*
+
+
+    I cannot find the video I adapted this camera controller from as it was a 15 second youtube short that doesn't 
+    seem to be up anymore. Be aware that this code is adapted from another source and may show similarities to other code
+
+
+    */
     void Start()
     {
        cam = Camera.main; 
