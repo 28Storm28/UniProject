@@ -29,4 +29,7 @@ public class PauseMenuController : MonoBehaviour
         Debug.Log("Restarting"); 
         SceneManager.LoadScene(currentScene.name); 
     }
+    public void returnToMain(){ 
+        SceneManager.LoadScene("Main menu"); 
+    }
 }

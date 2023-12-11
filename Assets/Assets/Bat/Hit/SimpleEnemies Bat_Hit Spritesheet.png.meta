@@ -115,6 +115,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -296,7 +308,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SimpleEnemies Bat_Hit Spritesheet_0: -7912622598521415286
+      SimpleEnemies Bat_Hit Spritesheet_1: 6116137424041138213
+      SimpleEnemies Bat_Hit Spritesheet_2: 5617354705737343502
+      SimpleEnemies Bat_Hit Spritesheet_3: 1291359323746821434
+      SimpleEnemies Bat_Hit Spritesheet_4: 2737477487669968115
+      SimpleEnemies Bat_Hit Spritesheet_5: -2228428332842407226
+      SimpleEnemies Bat_Hit Spritesheet_6: 2298754540961256333
+      SimpleEnemies Bat_Hit Spritesheet_7: 2758327928439124402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

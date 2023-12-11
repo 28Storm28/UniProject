@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 94658209019720409}
   - component: {fileID: 7962912947210579509}
   - component: {fileID: 6364201168578623959}
+  - component: {fileID: -6206354404549808882}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -129,27 +130,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51965082312e1a747aea0f75666ec9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: 
+  main: {fileID: 21300000, guid: e85e1666308243640a38da1b39d979c9, type: 3}
+  head: {fileID: 21300000, guid: 30003d7c13ed7f84fb37ec1530e98a4e, type: 3}
+  projectilePrefab: {fileID: 84071824016494379, guid: 50d347e7afe35f84f86709c2e41db1a0, type: 3}
+  projectileOffset: {fileID: 1792180299684085707}
+  reloadTime: 0
+  ammo: 0
+  canMove: 1
+  bounce: 0
+  jumpAmount: 1
   initial_speed: 4
   initial_jumpingPower: 8
   isFacingRight: 1
-  main: {fileID: 21300000, guid: e85e1666308243640a38da1b39d979c9, type: 3}
-  head: {fileID: 21300000, guid: 30003d7c13ed7f84fb37ec1530e98a4e, type: 3}
-  jumpAmount: 1
   rb: {fileID: 106542669631435819}
   groundCheck: {fileID: 6695541590909342289}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  projectilePrefab: {fileID: 84071824016494379, guid: 50d347e7afe35f84f86709c2e41db1a0, type: 3}
-  projectileOffset: {fileID: 1792180299684085707}
-  ammo: 0
-  canMove: 0
-  health: 3
   flashCol: {r: 1, g: 0, b: 0, a: 1}
   returnCol: {r: 1, g: 1, b: 1, a: 1}
-  flashDuration: 0.48
-  flashNumber: 11
+  flashDuration: 0.5
+  flashNumber: 3
   canTakeDamage: 1
+  health: 3
 --- !u!70 &7962912947210579509
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -198,6 +202,42 @@ CircleCollider2D:
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: f7c096cc5ffd8e146b91269b5d363975, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.15227617, y: -0.14071834}
+  m_Radius: 2.5053158
+--- !u!58 &-6206354404549808882
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709265052360120833}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1d37042942421cc488415b59b329e84d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

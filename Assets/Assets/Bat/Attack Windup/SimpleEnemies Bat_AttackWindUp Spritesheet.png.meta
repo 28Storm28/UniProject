@@ -127,6 +127,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -392,7 +404,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SimpleEnemies Bat_AttackWindUp Spritesheet_0: 6576623038825151269
+      SimpleEnemies Bat_AttackWindUp Spritesheet_1: -2500424989446020069
+      SimpleEnemies Bat_AttackWindUp Spritesheet_10: 5879405450061320873
+      SimpleEnemies Bat_AttackWindUp Spritesheet_11: -7625193860192024704
+      SimpleEnemies Bat_AttackWindUp Spritesheet_2: -2045206578378478611
+      SimpleEnemies Bat_AttackWindUp Spritesheet_3: 8953640587123788559
+      SimpleEnemies Bat_AttackWindUp Spritesheet_4: 7930619332517231196
+      SimpleEnemies Bat_AttackWindUp Spritesheet_5: -8873664057175004653
+      SimpleEnemies Bat_AttackWindUp Spritesheet_6: 810864350652610473
+      SimpleEnemies Bat_AttackWindUp Spritesheet_7: -5274120313676615248
+      SimpleEnemies Bat_AttackWindUp Spritesheet_8: 8460425322797645292
+      SimpleEnemies Bat_AttackWindUp Spritesheet_9: 8484498556569033033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
