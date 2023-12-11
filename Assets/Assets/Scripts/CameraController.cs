@@ -40,4 +40,7 @@ public class CameraController : MonoBehaviour
             yOffset += inputOffsetY;
         }
     }
+    public void setTarget(Transform newTarget){
+        target = newTarget; 
+    }
 }

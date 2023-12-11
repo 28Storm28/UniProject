@@ -53,21 +53,21 @@ public class birdManager : MonoBehaviour
     }
     void FixedUpdate()
     {
-
         if(!Dead){
             if(homeRadius.GetComponent<batHomeRadius>().playerWithin){
                 Attacking = true; 
+                goingHome = false; 
             }
             if(Dying){
                 Death(); 
             }
             if(Attacking){
-                if(!homeRadius.GetComponent<batHomeRadius>().playerWithin){
+                if(!homeRadius.GetComponent<batHomeRadius>().playerWithin == true){
                     goingHome = true; 
                 }
                 agent.SetDestination(target.position);
             }   
-            if(goingHome){
+            if(goingHome && new Vector2(agent.destination.x, agent.destination.y) != startPos){
                 RTB();
             }
         }
