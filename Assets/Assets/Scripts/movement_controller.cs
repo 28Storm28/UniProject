@@ -69,7 +69,8 @@ public class movement_controller : MonoBehaviour
         if(squished || bounce){
             rb.rotation -= rb.velocity.x; 
         }
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        //Stops head from getting stuck in the wall while in bounce mode
+        if(!bounce){rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);}
     }
     void Update()
     {
