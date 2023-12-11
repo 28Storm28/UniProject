@@ -25,11 +25,11 @@ public class PauseMenuController : MonoBehaviour
         }
     }
     public void restartLevel(){ 
-        
+
         Debug.Log("Restarting"); 
         SceneManager.LoadScene(currentScene.name); 
     }
     public void returnToMain(){ 
-        SceneManager.LoadScene("Main menu"); 
+        SceneManager.LoadScene("MainMenu"); 
     }
 }
